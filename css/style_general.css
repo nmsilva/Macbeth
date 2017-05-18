@@ -9,6 +9,9 @@ As alterações iniciais, foram feitas todas nesta área
 body {
     overflow-x:hidden;
 }
+.exclude{
+  height:20px;
+}
 
 .btn-success {
     background-color: #31bc86 !important;
@@ -20,7 +23,6 @@ body {
     border-radius:0 !important;
 
 }
-
 body , h1 , h2 , h3, h4, h5 ,h6 , p, td , th , table{
 font-family: 'Open Sans', sans-serif !important;
 }
@@ -67,7 +69,27 @@ XS = 40px;
 S = 80px;
 M = 200px;
 
-*/
+*//*
+
+.tablescale tbody td.xs{
+border: 1px solid #efefef !important;
+}
+ td.s.ref {
+    background-color: #fff !important;
+    border-bottom: 1px solid #efefef !important;
+    border: 1px solid #efefef !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    border-right: 0px !important;
+}   */
+
+
+
+
+
 
 .table>caption+thead>tr:first-child>td, .table>caption+thead>tr:first-child>th, .table>colgroup+thead>tr:first-child>td, .table>colgroup+thead>tr:first-child>th, .table>thead:first-child>tr:first-child>td, .table>thead:first-child>tr:first-child>th {
     border-top: 0;
@@ -88,6 +110,8 @@ M = 200px;
 }
 .tablescale .sm.title h3{
 text-align:center;
+font-weight:700;
+letter-spacing: 1px !important;
   }
 .tablescale .sm.title p{
   text-align:center;
@@ -152,14 +176,14 @@ M = 200px;
 */
 .tablegroup .sm.group p {
     text-align: center;
-    margin-bottom: 23.5px;
+    margin-bottom: 13.5px;
     font-size:14px;
 }
 td.sm.group {
     height: 146px;
 }
 .tablegroup {
-    width: 22% !important;
+    width: 11% !important;
     top: 10px;
     position: relative;
     float:left;
