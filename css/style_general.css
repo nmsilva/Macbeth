@@ -5,7 +5,41 @@
 As alterações iniciais, foram feitas todas nesta área
 
 */
-
+.bar1{
+width: 100%;
+height: 81px;
+top: 41.5px;
+position: relative;}
+img.bar2 {
+    width: 103%;
+    height: 81px;
+    top: 59px;
+    position: relative;
+    right: 1.5%;}
+.bar3{width: 100%;
+    height: 80.2px;
+    top: 19.2px;
+    position: relative;}
+.bar4{
+  width: 103%;
+  height: 81px;
+  position: relative;
+  right: 8px;
+  top: 57px;
+}
+.bar5{
+  width: 103.5%;
+height: 81px;
+position: relative;
+right: 6px;
+top: 57px;
+}
+.bar6{
+    width: 100%;
+    height: 81px;
+    top: 19px;
+    position: relative;
+}
 body {
     overflow-x:hidden;
 }
@@ -265,7 +299,7 @@ td.sm.group {
 }
 .tablescale .sm.title.doability p {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 12%;
 }
 .sm.title.doability h3{
   margin-top: 30px !important;
