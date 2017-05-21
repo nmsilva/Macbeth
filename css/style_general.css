@@ -5,6 +5,12 @@
 As alterações iniciais, foram feitas todas nesta área
 
 */
+
+body{
+    position: relative;
+    display: inline-block;
+    min-width: 1270px;
+}
 .bar1{
 width: 100%;
 height: 81px;
@@ -355,4 +361,14 @@ width:20% !important;
 .objective_btn a:focus, .objective_btn a:hover {
     color: #fff !important;
     text-decoration: none !important;
+}
+
+input.transparent{
+    background: rgba(51, 51, 51, 0.2);
+    box-shadow: none;
+    text-align: center;
+}
+
+.template{
+    display: none;
 }
