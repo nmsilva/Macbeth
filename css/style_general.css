@@ -12,16 +12,20 @@ body{
     min-width: 1270px;
 }
 .bar1{
-width: 100%;
-height: 81px;
-top: 41.5px;
-position: relative;}
-img.bar2 {
-    width: 103%;
+    width: 100%;
     height: 81px;
-    top: 59px;
-    position: relative;
-    right: 1.5%;}
+    top: 71px;
+    position: absolute;
+    left: 0;
+}
+img.bar2 {
+    width: 100%;
+    height: 81px;
+    top: 116px;
+    left: 0;
+    position: absolute;
+    right: 1.5%;
+}
 .bar3{width: 100%;
     height: 80.2px;
     top: 19.2px;
@@ -100,6 +104,9 @@ thead {
 .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
     border-bottom-width: 0px !important;
 }
+tbody tr:nth-child(2) td.padding-top{
+    margin-top: 10px !important;
+}
 
 
 /** Tabela Scale **/
@@ -149,19 +156,20 @@ border: 1px solid #efefef !important;
   border:0px ;
 }
 .tablescale .sm.title h3{
-text-align:center;
-font-weight:700;
-letter-spacing: 1px !important;
-  }
+    text-align:center;
+    font-weight:700;
+    letter-spacing: 1px !important;
+}
 .tablescale .sm.title p{
   text-align:center;
   margin-bottom:30px;
 }
 .tablescale{
-    width:56% !important;
     position: relative;
     top: 10px;
     float:left;
+    width: calc(100% - 20px) !important;
+    margin: 0 10px 15px;
 }
 .tablescale .xs input {
   padding:5px !important;
@@ -205,6 +213,16 @@ letter-spacing: 1px !important;
     text-align:center;
     border: 0px
 }
+.bootstrap-select > .dropdown-toggle {
+    width: 100%;
+    padding-right: 25px;
+    z-index: 1;
+    border-radius: 0;
+    font-size: smaller;
+    word-wrap: normal;
+    border: 0;
+    max-width:180px !important;
+}
 
 /** Tabela Group **/
 /**
@@ -214,7 +232,7 @@ S = 80px;
 M = 200px;
 
 */
-.tablegroup .sm.group p {
+.sm.group p {
     text-align: center;
     margin-bottom: 13.5px;
     font-size:14px;
@@ -251,16 +269,6 @@ td.sm.group {
     font-size: smaller;
     text-align: center;
     vertical-align: middle;
-}
-.tablegroup .bootstrap-select > .dropdown-toggle {
-    width: 100%;
-    padding-right: 25px;
-    z-index: 1;
-    border-radius: 0;
-    font-size: smaller;
-    word-wrap: normal;
-    border: 0;
-    max-width:180px !important;
 }
 .tablegroup .col-lg-12{
   padding-right:0px !important;

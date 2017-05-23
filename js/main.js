@@ -2,7 +2,8 @@
 $(function(){
     var add_sheet = function(){
         var template_sheet = $('.tab-pane.template').clone();
-        var sheet_id = 'sheet-' + ($('.tab-content').find('.tab-pane:not(.template)').length + 1);
+        var sheet_num = ($('.tab-content').find('.tab-pane:not(.template)').length + 1);
+        var sheet_id = 'sheet-' + sheet_num;
         template_sheet.attr('id', sheet_id);
         template_sheet.addClass('active');
         template_sheet.removeClass('template');
@@ -10,11 +11,14 @@ $(function(){
         $('.tab-content').append(template_sheet);
         
         $('.nav-tabs .active').removeClass('active');
-        $('.nav-tabs').append($('<li class="active"><a href="#'+ sheet_id +'" data-toggle="tab">New Sheet</a></li>'));
+        $('.nav-tabs').append($('<li class="active"><a href="#'+ sheet_id +'" data-toggle="tab">Sheet ' + sheet_num + '</a></li>'));
         
-        add_row();
+        var sheet = $('.tab-content .tab-pane.active');
+        add_row(sheet);
         
-        return $('.tab-content .tab-pane.active');
+        sheet.find("tbody").sortable();
+        
+        return sheet;
     };
     var add_row = function(sheet){
         if (sheet === undefined){
@@ -27,6 +31,7 @@ $(function(){
             
             $(this).find('tbody').append(template_row);
         });
+        $(this).find("tbody").sortable('refresh');
     };
     
     var get_sheet_data = function(sheet){
@@ -35,10 +40,15 @@ $(function(){
         data_sheet.num_rows = 0;
         $(sheet).find('table tbody tr').each(function(){
             var index_start = parseInt($(this).parents('table').attr('index-start'));
-            var index = index_start + ($(this).index() * 2);
+            var tr_index = ($(this).index() * 2);
             
             $(this).find('input, select').each(function(){
               var col = $(this).attr('col');
+              
+              if($(this).attr('index-start') !== undefined){
+                  index_start = parseInt($(this).attr('index-start'));
+              }
+              var index = index_start + tr_index;
               
               data_sheet[col + index] = $(this).val();
               
@@ -76,7 +86,8 @@ $(function(){
         });
     };
     var load_data = function(){
-        var _data = Cookies.get('data');
+        //var _data = Cookies.get('data');
+        var _data = window.localStorage.getItem('data');
         if (_data === undefined)
             return false;
         
@@ -94,10 +105,14 @@ $(function(){
             }
             $(sheet).find('table tbody tr').each(function(){
                 var index_start = parseInt($(this).parents('table').attr('index-start'));
-                var index = index_start + ($(this).index() * 2);
+                var tr_index = ($(this).index() * 2);
                 
                 $(this).find('input, select').each(function(){
                   var col = $(this).attr('col');
+                  if($(this).attr('index-start') !== undefined){
+                      index_start = parseInt($(this).attr('index-start'));
+                  }
+                  var index = index_start + tr_index;
                   
                   $(this).attr('tmp-col', col + index);
                   
@@ -133,7 +148,9 @@ $(function(){
     load_data();
     setInterval(function(){
         var data = get_data();
-        Cookies.set('data', JSON.stringify(data), { expires: 7 });
+        
+        window.localStorage.setItem('data', JSON.stringify(data));
+        //Cookies.set('data', JSON.stringify(data), { path: '', expires: 7 });
         
     }, 5000);
 });

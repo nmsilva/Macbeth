@@ -9,7 +9,11 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-select.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+
+    </script>
     
     <script src="js/main.js"></script>
     <meta charset="utf-8">
@@ -22,32 +26,53 @@
 	    <div class="tab-pane template">
             <table class="table table-bordered table-condensed tablescale" index-start="14">
               <thead>
-                <td colspan="3" class="sm title"><h3>OBJECTIVE 01</h3> 			<br/>
-                  <p>To promote the social inclusion and protection of people and families</p>
-                </td>
-                <td colspan="13" class="sm description">
-                <p>Contribution towards achieving the objective</p><h6><img class="bar1" src="verde.png"</h6>        </td>
+                <tr>
+                    <td></td>
+                    <td colspan="3" class="sm title"><h3>OBJECTIVE 01</h3> 			<br/>
+                      <p>To promote the social inclusion and protection of people and families</p>
+                    </td>
+                    <td colspan="13" class="sm description"><p>Contribution towards achieving the objective</p><h6><img class="bar1" src="verde.png"/></h6></td>
+                    <td class="sm group"><h3>Governo de Pernambuco</h3> <p> SEDSDH Group Judgements</p></td>
+                    <td  class="sm group"></td>
+                    <td colspan="7" class="sm different">
+                     <p>Difference of contribution between programmes (individual judgements)</p>
+                      <img class="bar2" src="half.png">
+                   </td>
+                </tr>
               </thead>
-                <thead class="list">
-                <td class="s header">Code</td>
-                <td class="s header">Name</td>
-                <td class="s header">Ref</td>
-                <td class="xs red header">extreme</td>
-                <td class="xs red header">very strong</td>
-                <td class="xs red header">strong</td>
-                <td class="xs red header">moderate</td>
-                <td class="xs red header">weak</td>
-                <td class="xs red header">very weak</td>
-                <td class="xs white header">no</td>
-                <td class="xs green header">very weak</td>
-                <td class="xs green header">weak</td>
-                <td class="xs green header">moderate</td>
-                <td class="xs green header">strong</td>
-                <td class="xs green header">very strong</td>
-                <td class="xs green header">extreme</td>
+              <thead class="list">
+                  <tr>
+                    <td class="s header"></td>
+                    <td class="s header">Code</td>
+                    <td class="s header">Name</td>
+                    <td class="s header">Ref</td>
+                    <td class="xs red header">extreme</td>
+                    <td class="xs red header">very strong</td>
+                    <td class="xs red header">strong</td>
+                    <td class="xs red header">moderate</td>
+                    <td class="xs red header">weak</td>
+                    <td class="xs red header">very weak</td>
+                    <td class="xs white header">no</td>
+                    <td class="xs green header">very weak</td>
+                    <td class="xs green header">weak</td>
+                    <td class="xs green header">moderate</td>
+                    <td class="xs green header">strong</td>
+                    <td class="xs green header">very strong</td>
+                    <td class="xs green header">extreme</td>
+                    <td class="m header">Difference to Status Quo</td>
+                    <td class="m header">Difference to Next</td>
+                    <td class="xs header">no</td>
+                    <td class="xs header">very weak</td>
+                    <td class="xs header">weak</td>
+                    <td class="xs header">moderate</td>
+                    <td class="xs header">strong</td>
+                    <td class="xs header">very strong</td>
+                    <td class="xs header">extreme</td>
+                  </tr>
               </thead>
              <tbody>
-               <tr class="template">
+               <tr class="template ui-state-default">
+                 <td class="s"><div class="order">-</div></td>
                  <td class="s"><input type="text" class="form-control transparent" col="B" /></td>
                  <td class="m"><input type="text" class="form-control transparent" col="C" /></td>
                  <td class="s ref"><input type="text" class="form-control transparent" col="E" /></td>
@@ -64,49 +89,19 @@
                  <td class="xs"><input type="text" class="form-control" maxlength="2" col="Q" /></td>
                  <td class="xs"><input type="text" class="form-control" maxlength="2" col="R" /></td>
                  <td class="xs"><input type="text" class="form-control" maxlength="2" col="S" /></td>
-               </tr>
-            </tbody>
-           </table>
-           <table class="table table-bordered table-condensed tablegroup" index-start="14">
-             <thead>
-               <tr>
-                   <td class="sm group"><h3>Governo de Pernambuco</h3> <p> SEDSDH Group Judgements</p></td>
-               </tr>
-               <tr>
-                 <td class="m header">Difference to Status Quo</td>
-               </tr>
-             </thead>
-             <tbody>
-               <tr class="template">
-                  <td class="m">   
-                       <select class="show-menu-arrow form-control" multiple data-max-options="2" col="W">
-                         <option>extreme</option>
-                         <option>very strong</option>
-                         <option>strong</option>
-                         <option>moderate</option>
-                         <option>weak</option>
-                         <option>very weak</option>
-                         <option>no</option>
-                       </select>
+                 <td class="">   
+                   <select class="show-menu-arrow form-control" multiple data-max-options="2" col="W">
+                     <option>extreme</option>
+                     <option>very strong</option>
+                     <option>strong</option>
+                     <option>moderate</option>
+                     <option>weak</option>
+                     <option>very weak</option>
+                     <option>no</option>
+                   </select>
                  </td>
-               </tr>
-               </tr>
-             </tbody>
-           </table>
-           <table class="table table-bordered table-condensed tablegroup" index-start="15">
-             <thead>
-               <tr>
-                   <td  class="sm group"></td>
-               </tr>
-               <tr>
-                 <td class="m header">Difference to Next</td>
-               </tr>
-               <tr class="exclude"></tr>
-             </thead>
-             <tbody>
-               <tr class="template">
-                 <td class="m">
-                    <select class="show-menu-arrow form-control" multiple data-max-options="2" col="X">
+                 <td class="padding-top">
+                    <select class="show-menu-arrow form-control" multiple data-max-options="2" col="X" index-start="15">
                       <option>extreme</option>
                       <option>very strong</option>
                       <option>strong</option>
@@ -116,40 +111,17 @@
                       <option>no</option>
                     </select>
                   </td>
+                  <td class="xs padding-top"><input type="text" class="form-control" maxlength="2" col="AB" index-start="15"/></td>
+                  <td class="xs padding-top"><input type="text" class="form-control" maxlength="2" col="AC" index-start="15"/></td>
+                  <td class="xs padding-top"><input type="text" class="form-control" maxlength="2" col="AD" index-start="15"/></td>
+                  <td class="xs padding-top"><input type="text" class="form-control" maxlength="2" col="AE" index-start="15"/></td>
+                  <td class="xs padding-top"><input type="text" class="form-control" maxlength="2" col="AF" index-start="15"/></td>
+                  <td class="xs padding-top"><input type="text" class="form-control" maxlength="2" col="AG" index-start="15"/></td>
+                  <td class="xs padding-top"><input type="text" class="form-control" maxlength="2" col="AH" index-start="15"/></td>
                </tr>
-             </tbody>
-           </table>
-           <table class="table table-bordered table-condensed tablescale tabledifferent" index-start="15">
-             <thead>
-                <tr>
-                   <td colspan="7" class="sm different">
-                     <p>Difference of contribution between programmes (individual judgements)</p>
-                      <img class="bar2" src="half.png">
-                   </td>
-                 </tr>
-                 <tr class="headerdifferent">
-                   <td class="xs header">no</td>
-                   <td class="xs header">very weak</td>
-                   <td class="xs header">weak</td>
-                   <td class="xs header">moderate</td>
-                   <td class="xs header">strong</td>
-                   <td class="xs header">very strong</td>
-                   <td class="xs header">extreme</td>
-                 </tr>
-                 <tr class="exclude"></tr>
-            </thead>
-            <tbody>
-              <tr class="template">
-                <td class="xs"><input type="text" class="form-control" maxlength="2" col="AB" /></td>
-                <td class="xs"><input type="text" class="form-control" maxlength="2" col="AC" /></td>
-                <td class="xs"><input type="text" class="form-control" maxlength="2" col="AD"/></td>
-                <td class="xs"><input type="text" class="form-control" maxlength="2" col="AE" /></td>
-                <td class="xs"><input type="text" class="form-control" maxlength="2" col="AF" /></td>
-                <td class="xs"><input type="text" class="form-control" maxlength="2" col="AG" /></td>
-                <td class="xs"><input type="text" class="form-control" maxlength="2" col="AH" /></td>
-              </tr>
             </tbody>
-            </table>
+           </table>
+           
             <div class="objective_btn">
               <button type="button" class="btn doability btn-success button" data-action="export"><a>Export</a></button>
               <button type="button" class="btn doability btn-success button" data-action="add-row"><a>Add Row</a></button>
@@ -158,8 +130,7 @@
 		<!-- END TAB TEMPLATE -->
 		
 	</div>
-	<ul class="nav nav-tabs">
-	</ul>
-	<button type="button" class="btn doability btn-success button" data-action="add-sheet"><a>Add Sheet</a></button>
+	<ul class="nav nav-tabs"></ul>
+	<button type="button" class="btn doability btn-success button" data-action="add-sheet">Add Sheet</button>
   </body>
 </html>
