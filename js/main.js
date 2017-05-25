@@ -38,7 +38,7 @@ $(function(){
         var data_sheet = {};
         
         data_sheet.num_rows = 0;
-        $(sheet).find('table tbody tr').each(function(){
+        $(sheet).find('table tbody tr:not(.template)').each(function(){
             var index_start = parseInt($(this).parents('table').attr('index-start'));
             var tr_index = ($(this).index() * 2);
             
@@ -120,7 +120,7 @@ $(function(){
             });
             $.each(this, function(k, v){
                 if($.isArray(v)) {
-                     $(sheet).find(':input[tmp-col=' + k + ']').selectpicker('val', v);
+                    $(sheet).find(':input[tmp-col=' + k + ']').selectpicker('val', v);
                 } else {
                     $(sheet).find(':input[tmp-col=' + k + ']').val(v);
                 }
