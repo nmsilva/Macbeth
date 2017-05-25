@@ -26,15 +26,14 @@ img.bar2 {
     position: absolute;
     right: 1.5%;
 }
-/*
-@media only screen and (max-width: 1384px) {
+@media only screen and (max-width: 1340px) {
     img.bar1 {
         top: 91px;
     }
     img.bar2 {
         top: 136px;
     }
-} */
+} 
 .bar3{width: 100%;
     height: 80.2px;
     top: 19.2px;
@@ -133,6 +132,13 @@ tbody tr td.padding-top > *{
     border-top: none !important;
 }
 
+.nav-tabs a.on-change{
+    padding: 0;
+}
+.nav-tabs a.on-change input{
+    padding: 11px !important;
+}
+
 
 /** Tabela Scale **/
 /**
@@ -216,7 +222,7 @@ border: 1px solid #efefef !important;
     max-width: 40px;
 }
 .tablescale td.s {
-    width: 60px;
+    width: 40px;
     text-align:center;
     vertical-align: middle;
 }
@@ -243,6 +249,9 @@ border: 1px solid #efefef !important;
     text-align:center;
     border: 0px
 }
+.tablescale td.name{
+    width: 240px;
+}
 .bootstrap-select > .dropdown-toggle {
     width: 100%;
     padding-right: 25px;
@@ -253,9 +262,20 @@ border: 1px solid #efefef !important;
     border: 0;
     max-width:180px !important;
 }
-.tablescale tr td:nth-child(1){
+.tablescale tr td:nth-child(2){
     width: 25px;
 }
+.tablescale tr td:nth-child(1){
+    width: 15px;
+}
+.tablescale tr td:nth-child(1) a{
+    color: #FFF;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+
 
 /** Tabela Group **/
 /**

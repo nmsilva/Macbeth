@@ -7,15 +7,14 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="css/style_general.css" rel="stylesheet" type="text/css" />
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-select.js"></script>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>-->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/tinysort.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/tinysort.charorder.min.js"></script>
 
-    </script>
-    
     <script src="js/main.js"></script>
     <meta charset="utf-8">
     <title>Macbeth Voting SEDSDH</title>
@@ -28,6 +27,7 @@
             <table class="table table-bordered table-condensed tablescale" index-start="14">
               <thead>
                 <tr>
+                    <td></td>
                     <td></td>
                     <td colspan="3" class="sm title"><h3>OBJECTIVE 01</h3> 			<br/>
                       <p>To promote the social inclusion and protection of people and families</p>
@@ -43,6 +43,7 @@
               </thead>
               <thead class="list">
                   <tr>
+                    <td class="s header"></td>
                     <td class="s header"></td>
                     <td class="s header">Code</td>
                     <td class="s header">Name</td>
@@ -73,11 +74,14 @@
               </thead>
              <tbody>
                <tr class="template ui-state-default">
+                 <td class="s"><a data-action="del-row"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
                  <td class="s"><i class="fa fa-bars" aria-hidden="true"></i></td>
                  <td class="s"><input type="text" class="form-control transparent" col="B" /></td>
-                 <td class="m"><input type="text" class="form-control transparent" col="C" /></td>
+                 <td class="m name"><input type="text" class="form-control transparent" col="C" /></td>
                  <td class="s ref"><input type="text" class="form-control transparent" col="E" /></td>
-                 <td class="xs"><input type="text" class="form-control" maxlength="2" col="G" /></td>
+                 <td class="xs">
+                     <input type="text" class="form-control" maxlength="2" col="G" />
+                 </td>
                  <td class="xs"><input type="text" class="form-control" maxlength="2" col="H" /></td>
                  <td class="xs"><input type="text" class="form-control" maxlength="2" col="I" /></td>
                  <td class="xs"><input type="text" class="form-control" maxlength="2" col="J" /></td>
@@ -126,6 +130,7 @@
             <div class="objective_btn">
               <button type="button" class="btn doability btn-success button" data-action="export"><a>Export</a></button>
               <button type="button" class="btn doability btn-success button" data-action="add-row"><a>Add Row</a></button>
+              <button type="button" class="btn doability btn-success button" data-action="add-orderValue"><a>ORDER</a></button>
             </div>
 		</div>
 		<!-- END TAB TEMPLATE -->
